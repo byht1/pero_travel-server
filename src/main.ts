@@ -14,7 +14,7 @@ const start = async () => {
       .addServer('http://localhost:5000')
       .build();
     const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup('/docs', app, document);
+    SwaggerModule.setup('/', app, document);
 
     await app.listen(PORT, () => console.log(`server start on PORT ${PORT}`));
   } catch (error) {

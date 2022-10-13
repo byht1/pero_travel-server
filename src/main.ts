@@ -11,10 +11,10 @@ const start = async () => {
       .setTitle('Сервер для командного проекту подорожей')
       .setDescription('Документація REST API')
       .setVersion('0.0.1')
-      .addServer('http://localhost:5000')
+      .addServer('https://pero-travel-server.herokuapp.com')
       .build();
     const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup('/', app, document);
+    SwaggerModule.setup('/docs', app, document);
 
     await app.listen(PORT, () => console.log(`server start on PORT ${PORT}`));
   } catch (error) {
